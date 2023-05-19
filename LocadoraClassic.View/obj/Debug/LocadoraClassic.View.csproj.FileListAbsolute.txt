@@ -1,0 +1,16 @@
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\bin\Debug\LocadoraClassic.View.exe.config
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\bin\Debug\LocadoraClassic.View.exe
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\bin\Debug\LocadoraClassic.View.pdb
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\obj\Debug\LocadoraClassic.View.csproj.AssemblyReference.cache
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\obj\Debug\LocadoraClassic.View.csproj.SuggestedBindingRedirects.cache
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\obj\Debug\LocadoraClassic.View.Properties.Resources.resources
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\obj\Debug\LocadoraClassic.View.csproj.GenerateResource.cache
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\obj\Debug\LocadoraClassic.View.csproj.CoreCompileInputs.cache
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\obj\Debug\LocadoraClassic.View.exe
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\obj\Debug\LocadoraClassic.View.pdb
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\obj\Debug\LocadoraClassic.View.frmMenu.resources
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\obj\Debug\LocadoraClassic.View.FrmTelaGenero.resources
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\obj\Debug\LocadoraClassic.View.FrmTelaCategoria.resources
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\obj\Debug\LocadoraClassic.View.FrmTelaFilme.resources
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\obj\Debug\LocadoraClassic.View.FrmCliente.resources
+C:\Users\PROFESSOR\source\repos\LocadoraClassic\LocadoraClassic.View\obj\Debug\LocadoraClassic.View.FrmTelaLocacao.resources
