@@ -124,5 +124,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LocadoraClassic.DAL\LocadoraClassic.DAL.csproj">
+      <Project>{52212705-f8f5-4e28-a37a-58a4ce81214e}</Project>
+      <Name>LocadoraClassic.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LocadoraClassic.VO\LocadoraClassic.VO.csproj">
+      <Project>{37aac52d-69ed-4d93-892b-612c55bb0505}</Project>
+      <Name>LocadoraClassic.VO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
