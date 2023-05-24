@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtGenero = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.dgvGeneros = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -48,12 +50,12 @@
             // 
             this.txtGenero.Location = new System.Drawing.Point(104, 44);
             this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(415, 20);
+            this.txtGenero.Size = new System.Drawing.Size(655, 20);
             this.txtGenero.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(386, 80);
+            this.button1.Location = new System.Drawing.Point(626, 80);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 23);
             this.button1.TabIndex = 2;
@@ -61,11 +63,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dgvGeneros
+            // 
+            this.dgvGeneros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGeneros.Location = new System.Drawing.Point(44, 143);
+            this.dgvGeneros.Name = "dgvGeneros";
+            this.dgvGeneros.Size = new System.Drawing.Size(715, 273);
+            this.dgvGeneros.TabIndex = 3;
+            // 
             // FrmTelaGenero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvGeneros);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.label1);
@@ -73,6 +84,8 @@
             this.Name = "FrmTelaGenero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Gênero";
+            this.Load += new System.EventHandler(this.FrmTelaGenero_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,5 +96,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvGeneros;
     }
 }
