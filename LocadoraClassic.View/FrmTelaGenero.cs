@@ -44,6 +44,35 @@ namespace LocadoraClassic.View
             CarregarGrid();
         }
 
+      
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            //ETAPA 1 - SELECIONAR O ID DA TABELA
+            int id=0;
+            // Verifica se há alguma linha selecionada no DataGridView
+            if (dgvGeneros.SelectedRows.Count > 0)
+            {
+                // Obtém a linha selecionada
+                DataGridViewRow selectedRow = dgvGeneros.SelectedRows[0];
+
+                // Obtém o valor do campo "id" da célula selecionada
+                id = Convert.ToInt32(selectedRow.Cells["Id"].Value);
+
+                // Faça o que precisar com o valor do campo "id"
+                // Por exemplo, exiba-o em uma caixa de diálogo
+                MessageBox.Show("O valor do campo 'id' é: " + id.ToString());
+            }
+
+            //ETAPA 2 - ENVIAR O ID PARA DELETE
+
+            GeneroDAL generoDAL = new GeneroDAL();
+            generoDAL.ExcluirGenero(id);
+            CarregarGrid();
+
+        }
+
+
         public void CarregarGrid()
         {
             dgvGeneros.DataSource = generoDAL.ObterGeneros().ToList();

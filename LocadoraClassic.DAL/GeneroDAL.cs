@@ -21,6 +21,8 @@ namespace LocadoraClassic.DAL
             comando.CommandText = "INSERT INTO genero(nome)values(@nome)";
             comando.Parameters.Add(new MySqlParameter("@nome", genero.Nome));
             comando.ExecuteNonQuery();
+
+            //Fechou conexão
             Conexao.Instance.Close();
 
         }
