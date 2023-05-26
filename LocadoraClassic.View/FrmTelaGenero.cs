@@ -8,10 +8,16 @@ namespace LocadoraClassic.View
 {
     public partial class FrmTelaGenero : Form
     {
+        Genero genero = new Genero();
+        int id = 0;
         GeneroDAL generoDAL = new GeneroDAL();
         public FrmTelaGenero()
         {
             InitializeComponent();
+            dgvGeneros.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvGeneros.CellDoubleClick += dgvGeneros_CellDoubleClick;
+          
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -22,7 +28,7 @@ namespace LocadoraClassic.View
         private void button1_Click(object sender, EventArgs e)
         {
             //objeto VO
-            Genero genero = new Genero();
+         
             //objeto DAL
         
             //Pegar o valor da caixinha e colocar na propriedade Nome
@@ -76,6 +82,62 @@ namespace LocadoraClassic.View
         public void CarregarGrid()
         {
             dgvGeneros.DataSource = generoDAL.ObterGeneros().ToList();
+        }
+
+       
+
+        private void dgvGeneros_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void dgvGeneros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            
+
+        }
+
+        private void dgvGeneros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Obtém a linha em que ocorreu o duplo clique
+                DataGridViewRow row = dgvGeneros.Rows[e.RowIndex];
+
+                // Seleciona a linha inteira
+                row.Selected = true;
+            }
+
+            //ETAPA 1 - SELECIONAR O ID DA TABELA
+           
+            // Verifica se há alguma linha selecionada no DataGridView
+            if (dgvGeneros.SelectedRows.Count > 0)
+            {
+                // Obtém a linha selecionada
+                DataGridViewRow selectedRow = dgvGeneros.SelectedRows[0];
+
+                // Obtém o valor do campo "id" da célula selecionada
+                id = Convert.ToInt32(selectedRow.Cells["Id"].Value);
+                string nome = selectedRow.Cells["Nome"].Value.ToString();
+                txtGenero.Text = nome;
+                // Faça o que precisar com o valor do campo "id"
+                // Por exemplo, exiba-o em uma caixa de diálogo
+               
+
+               
+            }
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            genero.Nome = txtGenero.Text;
+            genero.Id = id;
+            generoDAL.AtualizarGenero(genero);
+            txtGenero.Text = "";
+            CarregarGrid();
         }
     }
 }

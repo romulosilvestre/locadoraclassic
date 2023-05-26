@@ -1,10 +1,4 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 namespace LocadoraClassic.DAL
 {
@@ -17,15 +11,15 @@ namespace LocadoraClassic.DAL
             get { 
                 if(_instance == null)
                 {
-                    _instance = new MySqlConnection(@"Server=127.0.0.1;Database=locadoraclassic;Uid=root;Pwd=");
-                }
-                
+                    _instance = new MySqlConnection(@"Server=127.0.0.1;
+                     Database=locadoraclassic;
+                     Uid=root;
+                     Pwd=");
+                }          
                
                 return _instance; 
             } 
-        }
-
-      
+        }      
     }
 }
 
