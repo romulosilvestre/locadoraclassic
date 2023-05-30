@@ -12,7 +12,7 @@ namespace LocadoraClassic.DAL
                 if(_instance == null)
                 {
                     _instance = new MySqlConnection(@"Server=127.0.0.1;
-                     Database=locadoraclassic;
+                     Database=locadoraclassicfinal;
                      Uid=root;
                      Pwd=");
                 }          

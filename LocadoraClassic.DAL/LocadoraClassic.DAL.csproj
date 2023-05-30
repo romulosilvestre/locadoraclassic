@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
+    <Compile Include="CategoriaDAL.cs" />
     <Compile Include="GeneroDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
