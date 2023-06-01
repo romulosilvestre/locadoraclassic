@@ -18,6 +18,8 @@ namespace LocadoraClassic.View
         List<Categoria> categorias = new List<Categoria>();
         Categoria categoria = new Categoria();
         Genero genero = new Genero();
+        GeneroDAL generoDAL = new GeneroDAL();
+        CategoriaDAL categoriaDAL = new CategoriaDAL();
         List<Genero> generos = new List<Genero>();
         int idSelecionadoCat;
         int idSelecionadoGen;
@@ -52,8 +54,8 @@ namespace LocadoraClassic.View
             MessageBox.Show("Id Gen:" + idSelecionadoGen.ToString());
 
             Filme filme = new Filme();
-            filme.IdCategoria= 16;
-            filme.IdGenero= 5;
+            filme.IdCategoria= idSelecionadoCat;
+            filme.IdGenero= idSelecionadoGen;
             filme.Nome = txtNome.Text;
             filme.Sinopse = multiSinopse.Text;
             filme.Duracao = TimeSpan.Parse(mskDuracao.Text);
@@ -76,7 +78,7 @@ namespace LocadoraClassic.View
           
             //Criando categorias
 
-            categoria.Id = 1;
+           /* categoria.Id = 1;
             categoria.Nome = "Classic Vintage Raro";
             categoria.vlDiaria = 19.78m;
 
@@ -88,11 +90,11 @@ namespace LocadoraClassic.View
             //Adicionando as duas categorias
 
             categorias.Add(categoria);
-            categorias.Add(categoria2);
+            categorias.Add(categoria2);*/
 
             cmbCategoria.DisplayMember = "Nome";
             cmbCategoria.ValueMember = "Id";
-            cmbCategoria.DataSource = categorias.ToList();
+            cmbCategoria.DataSource = categoriaDAL.ObterCategorias().ToList();
         }
 
 
@@ -101,7 +103,7 @@ namespace LocadoraClassic.View
 
             //Criando categorias
 
-            genero.Id = 1;
+            /*genero.Id = 1;
             genero.Nome = "Terror";
           
 
@@ -112,13 +114,13 @@ namespace LocadoraClassic.View
 
             //Adicionando dois generos
             generos.Add(genero);
-            generos.Add(genero2);
+            generos.Add(genero2);*/
 
            
 
             cmbGenero.DisplayMember = "Nome";
             cmbGenero.ValueMember = "Id";
-            cmbGenero.DataSource = generos.ToList();
+            cmbGenero.DataSource = generoDAL.ObterGeneros().ToList();
 
 
         }
