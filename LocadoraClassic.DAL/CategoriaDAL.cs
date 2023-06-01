@@ -9,6 +9,7 @@ namespace LocadoraClassic.DAL
     {
         public void InserirCategoria(Categoria categoria)
         {
+
             //Abrir a Conexão
             Conexao.Instance.Open();
             //MySqlCommand
@@ -23,6 +24,7 @@ namespace LocadoraClassic.DAL
             comando.ExecuteNonQuery();
             //Fechou conexão
             Conexao.Instance.Close();
+
         }
 
         public List<Categoria> ObterCategorias()
