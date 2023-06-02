@@ -63,6 +63,7 @@ namespace LocadoraClassic.View
             filme.Banner = "C:/imagens/filme.png";
             FilmeDAL filmeDAL = new FilmeDAL();
             filmeDAL.InserirFilme(filme);
+            MessageBox.Show("Filme Inserido com Sucesso");
 
             
         }

@@ -31,9 +31,19 @@ namespace LocadoraClassic.View
             textBox1.Text = "";
             txtVlDiaria.Text = "";
             MessageBox.Show("Dados inserido com sucesso!");
-
-           
+            CarregarCategoria();         
             
+        }
+
+        private void FrmTelaCategoria_Load(object sender, EventArgs e)
+        {
+            CarregarCategoria(); 
+        }
+
+        public void CarregarCategoria()
+        {
+            CategoriaDAL categoriaDAL = new CategoriaDAL();
+            dgvCategorias.DataSource = categoriaDAL.ObterCategorias().ToList();
         }
     }
 }

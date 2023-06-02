@@ -20,6 +20,7 @@ namespace LocadoraClassic.VO
         {
             return Nome;
         }
+      
 
     }
 }

@@ -43,6 +43,7 @@ namespace LocadoraClassic.DAL
                 Categoria categoria = new Categoria();
                 categoria.Id = Convert.ToInt32(reader["id"]);
                 categoria.Nome = reader["nome"].ToString();
+                categoria.vlDiaria = Convert.ToDecimal(reader["vlDiaria"]);               
                 categorias.Add(categoria);
             }
             // Fechar a conexão e retornar os gêneros obtidos
